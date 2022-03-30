@@ -1,0 +1,199 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.container {
+  max-width: 1160px;
+  margin: 20px auto 0;
+  padding: 0 10px;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (0.5%) [200];
+  grid-template-columns: repeat(200, 0.5%);
+  grid-auto-rows: 50px;
+  grid-row-gap: 10px;
+  grid-auto-flow: row;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 70px 10px 70px 10px 70px 10px 70px 10px 70px 10px 70px 10px
+      70px 10px 70px 10px 70px 10px 70px;
+    grid-template-rows: repeat(10, 70px);
+    gap: 10px;
+    grid-template-areas:
+      "one one"
+      "three four"
+      "two two"
+      "seven seven"
+      "five eight"
+      "six nine";
+  }
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+@media only screen and (max-width: 600px) {
+  .one {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .two {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .three {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .four {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .five {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .six {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .seven {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .eight {
+    -ms-grid-row: 9;
+    -ms-grid-column: 3;
+  }
+  .nine {
+    -ms-grid-row: 11;
+    -ms-grid-column: 3;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .one {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 97;
+    grid-column: 1 / 98;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
+    grid-row: 1 / 6;
+  }
+  .two {
+    grid-column: -1 / -100;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+  }
+  .three {
+    grid-column: -1 / -50;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    grid-row: 3 / 6;
+  }
+
+  .four {
+    grid-column: 102 / -52;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    grid-row: 3 / 6;
+  }
+  .five {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 61;
+    grid-column: 1 / 62;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6 / 7;
+  }
+  .six {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 61;
+    grid-column: 1 / 62;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 3;
+    grid-row: 7 / 10;
+  }
+  .seven {
+    grid-column: 64 / -60;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 4;
+    grid-row: 6 / 10;
+  }
+  .nine {
+    grid-column: 144 / -1;
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 1;
+    grid-row: 9 / 10;
+  }
+  .eight {
+    grid-column: 144 / -1;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 3;
+    grid-row: 6 / 9;
+  }
+}
